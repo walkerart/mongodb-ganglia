@@ -16,7 +16,7 @@ class ServerStatus:
     def __init__(self):
         self.status = self.getServerStatus()
         # call individual metrics
-        for f in ["conns", "btree", "mem", "repl", "ops", "lock"]:
+        for f in ["conns", "btree", "mem", "ops",]:
             getattr(self,f)()
 
     def getServerStatus(self):
